@@ -1,2 +1,2 @@
-# ooxi / exception
+# Exception.h++
 
