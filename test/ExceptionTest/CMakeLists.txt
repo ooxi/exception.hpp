@@ -17,7 +17,6 @@ target_link_libraries(
 	"${PROJECT_NAME}"
 	PUBLIC
 		ooxi::exception
-		stdc++fs
 	PRIVATE
 		ooxi::exception::c++20
 )
