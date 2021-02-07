@@ -18,26 +18,8 @@ target_link_libraries(
 	PUBLIC
 		ooxi::exception
 		stdc++fs
-)
-
-
-target_compile_options(
-	"${PROJECT_NAME}"
 	PRIVATE
-		-std=c++17
-		-Wall
-		-Wextra
-		-Werror
-		-pedantic
-
-		-Wnon-virtual-dtor
-		-Wcast-align
-		-Wunused
-		-Woverloaded-virtual
-		-Wpedantic
-		-Wdouble-promotion
-		-Wformat=2
-
+		ooxi::exception::c++20
 )
 
 
