@@ -56,3 +56,4 @@ target_link_libraries(
 
 add_subdirectory("${CMAKE_CURRENT_LIST_DIR}/test/ExceptionTest")
 add_subdirectory("${CMAKE_CURRENT_LIST_DIR}/test/GlobalVsLocalExceptionTest")
+add_subdirectory("${CMAKE_CURRENT_LIST_DIR}/test/SimpleExample")
