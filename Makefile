@@ -14,10 +14,10 @@ clean:
 
 .PHONY: build
 build:
-	$(MAKE) -C 'build'
+	$(MAKE) --silent -C 'build'
 
 
 .PHONY: test
 test:
-	$(MAKE) -C 'build' test
+	$(MAKE) --silent -C 'build' test
 
