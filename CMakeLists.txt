@@ -6,6 +6,28 @@ enable_testing()
 
 
 project("ooxi-exception" CXX)
+add_library("${PROJECT_NAME}-c++20" INTERFACE)
+add_library("ooxi::exception::c++20" ALIAS "${PROJECT_NAME}-c++20")
+
+
+target_compile_options(
+	"${PROJECT_NAME}-c++20"
+	INTERFACE
+		-std=c++20
+		-Wall
+		-Wextra
+		-Werror
+		-Wpedantic
+
+		-Wnon-virtual-dtor
+		-Wcast-align
+		-Wunused
+		-Woverloaded-virtual
+		-Wdouble-promotion
+		-Wformat=2
+)
+
+
 add_library("${PROJECT_NAME}" STATIC "")
 add_library("ooxi::exception" ALIAS "${PROJECT_NAME}")
 
@@ -25,23 +47,10 @@ target_include_directories(
 )
 
 
-target_compile_options(
+target_link_libraries(
 	"${PROJECT_NAME}"
 	PRIVATE
-		-std=c++17
-		-Wall
-		-Wextra
-		-Werror
-		-pedantic
-
-		-Wnon-virtual-dtor
-		-Wcast-align
-		-Wunused
-		-Woverloaded-virtual
-		-Wpedantic
-		-Wdouble-promotion
-		-Wformat=2
-
+		ooxi::exception::c++20
 )
 
 
